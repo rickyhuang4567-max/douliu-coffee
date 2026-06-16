@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>豆留手挑濾掛咖啡｜手工挑豆後烘焙，乾淨順口</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Playfair+Display:wght@700&display=swap');
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 7rem;
+      }
+      body {
+        font-family:
+          'Noto Sans TC',
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background: #f8f1e9;
+        color: #3f2b1e;
+      }
+      a,
+      button {
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background-color 0.18s ease,
+          border-color 0.18s ease,
+          color 0.18s ease,
+          opacity 0.18s ease;
+      }
+      button {
+        cursor: pointer;
+      }
+      a:hover,
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(63, 43, 30, 0.16);
+      }
+      a:active,
+      button:active {
+        transform: translateY(0) scale(0.97);
+        box-shadow: 0 6px 14px rgba(63, 43, 30, 0.12);
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid rgba(241, 194, 125, 0.55);
+        outline-offset: 4px;
+      }
+      .serif {
+        font-family: 'Playfair Display', Georgia, serif;
+      }
+      .brown-grad {
+        background: linear-gradient(135deg, #3f2b1e 0%, #7a4a25 100%);
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background: #7a4a25;
+        transition: 0.25s;
+      }
+      .nav-link:hover:after {
+        width: 100%;
+      }
+      .tag {
+        background: #f2e2cc;
+        color: #71491f;
+        border-radius: 9999px;
+        padding: 0.2rem 0.6rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+      .card {
+        transition: 0.25s;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 35px rgba(63, 43, 30, 0.12);
+      }
+      .product-img {
+        transition: 0.35s;
+        scroll-margin-top: 7rem;
+      }
+      #products-grid .card {
+        scroll-margin-top: 7rem;
+      }
+      .modal {
+        animation: pop 0.25s ease;
+      }
+      @keyframes pop {
+        from {
+          opacity: 0;
+          transform: scale(0.96);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .hero-bg {
+        background:
+          linear-gradient(135deg, rgba(63, 43, 30, 0.93), rgba(122, 74, 37, 0.88)),
+          url('fulin_hero_handpicked_coffee.png');
+        background-size: cover;
+        background-position: center;
+      }
+      .section-title:after {
+        content: '';
+        display: block;
+        width: 64px;
+        height: 3px;
+        background: #c99149;
+        margin: 14px auto 0;
+        border-radius: 999px;
+      }
+      .brand-logo-mark {
+        width: 56px;
+        height: 56px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid #e8d9c8;
+        background: #fffaf2;
+        display: block;
+        box-shadow: 0 8px 20px rgba(63, 43, 30, 0.08);
+      }
+      .brand-logo-mark img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMQPJY9Y5F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-YMQPJY9Y5F');
+    </script>
+    <!-- End Google Analytics -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "豆留手挑濾掛咖啡三款主力豆",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Product",
+              "name": "90+ 摩羯座｜厚甜可可款",
+              "image": "ChatGPT Image 2026年6月7日 下午08_23_03.png",
+              "description": "太妃糖、奶油、巧克力風味的手挑濾掛咖啡，厚甜不酸，適合日常與送禮。",
+              "offers": {
+                "@type": "Offer",
+                "price": "35",
+                "priceCurrency": "TWD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://myship.7-11.com.tw/general/detail/GM2605239820064"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Product",
+              "name": "巴拿馬 Casa Ruiz｜平衡黑糖款",
+              "image": "ChatGPT Image 2026年6月7日 下午08_23_06.png",
+              "description": "黑糖、巧克力、香草風味的手挑濾掛咖啡，平衡耐喝，適合辦公室與企業禮。",
+              "offers": {
+                "@type": "Offer",
+                "price": "60",
+                "priceCurrency": "TWD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://myship.7-11.com.tw/general/detail/GM2605239820064"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Product",
+              "name": "黃金曼特寧｜醇厚木質款",
+              "image": "ChatGPT Image 2026年6月7日 下午08_17_32.png",
+              "description": "藥草、雪松、厚實風味的深焙手挑濾掛咖啡，醇厚低酸，適合喜歡濃厚口感的人。",
+              "offers": {
+                "@type": "Offer",
+                "price": "40",
+                "priceCurrency": "TWD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://myship.7-11.com.tw/general/detail/GM2605239820064"
+              }
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "豆留手挑濾掛咖啡",
+        "logo": "assets/brand-logo.png",
+        "description": "豆留手挑濾掛咖啡以手工挑豆、小批量烘焙與濾掛包裝為特色，提供日常飲用、送禮與企業客製咖啡。",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+886-2-2987-1006",
+          "contactType": "customer service",
+          "areaServed": "TW",
+          "availableLanguage": ["zh-Hant"]
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "豆留手挑濾掛咖啡常見問題",
+        "description": "整理豆留手挑濾掛咖啡的品牌特色、手挑豆原因、三款豆子選擇與下單方式。",
+        "inLanguage": "zh-Hant",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".answer-block"] }
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="bg-white/95 backdrop-blur sticky top-0 z-50 border-b border-[#E8D9C8]">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-3">
+          <span class="brand-logo-mark"><img src="assets/brand-logo.png" alt="手挑濾掛咖啡 Logo" /></span>
+          <div>
+            <div class="font-black text-2xl tracking-tight">豆留手挑濾掛咖啡</div>
+            <div class="text-xs text-[#8B5E3C]">Handpicked Drip Bag Coffee</div>
+          </div>
+        </a>
+        <div class="hidden lg:flex gap-8 text-sm font-bold">
+          <a class="nav-link" href="#products">三款豆子</a><a class="nav-link" href="#process">手挑流程</a
+          ><a class="nav-link" href="brew.html">沖泡教學</a><a class="nav-link" href="knowledge.html">咖啡知識</a
+          ><a class="nav-link" href="order.html">下單</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button
+            onclick="showCart()"
+            class="relative flex items-center gap-2 px-4 py-2.5 rounded-full border border-[#E8D9C8] hover:bg-[#F8F1E9] text-sm font-bold"
+          >
+            <i class="fas fa-shopping-bag"></i><span class="hidden sm:inline">購物車</span
+            ><span
+              id="cart-count"
+              class="hidden absolute -top-1 -right-1 bg-[#7A4A25] text-white text-[10px] min-w-[18px] h-[18px] rounded-full items-center justify-center px-1"
+              >0</span
+            >
+          </button>
+          <a
+            href="https://line.me/R/ti/p/@424tvsxa"
+            target="_blank"
+            class="hidden sm:inline-flex px-5 py-2.5 bg-[#3F2B1E] text-white rounded-full text-sm font-black"
+            >LINE 詢價</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero-bg text-white">
+      <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div
+            class="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-2 text-sm mb-6"
+          >
+            手工挑豆後再烘焙｜小批量新鮮製作
+          </div>
+          <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tight">
+            不是每一顆豆子，<br /><span class="text-[#F1C27D]">都有資格進你的杯子。</span>
+          </h1>
+          <p class="mt-6 text-lg text-white/90 max-w-xl">
+            每批生豆先人工挑除瑕疵豆、破裂豆、蟲蛀豆與狀態不佳的豆子，再進行烘焙與濾掛包裝。重點不是講手工，是讓咖啡喝起來更乾淨、順口、少雜味。
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#products" class="bg-white text-[#3F2B1E] rounded-full px-7 py-4 font-black">看三款主力豆</a
+            ><a href="#gift" class="border border-white/50 rounded-full px-7 py-4 font-bold">企業禮／客製詢價</a>
+          </div>
+          <div class="mt-8 grid grid-cols-3 gap-3 max-w-xl text-center text-sm">
+            <div class="bg-white/10 rounded-2xl p-4"><b class="block text-xl">手挑</b>先挑掉壞豆</div>
+            <div class="bg-white/10 rounded-2xl p-4"><b class="block text-xl">自烘</b>小批量烘焙</div>
+            <div class="bg-white/10 rounded-2xl p-4"><b class="block text-xl">濾掛</b>方便送禮</div>
+          </div>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-[2rem] p-5 shadow-2xl">
+          <img
+            src="fulin_hero_handpicked_coffee.png"
+            class="rounded-[1.5rem] w-full object-cover"
+            alt="豆留手挑濾掛咖啡主視覺"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-14">
+      <div class="text-center mb-10">
+        <div class="text-xs font-black tracking-[2px] text-[#8B5E3C]">BRAND PROMISE</div>
+        <h2 class="section-title text-4xl font-black mt-2">先挑豆，再烘焙；先把關，再入口。</h2>
+        <p class="mt-5 text-[#6B4423] max-w-2xl mx-auto">
+          不添加香精、糖、奶精。用手工挑豆建立乾淨度，再用小批量烘焙保留香氣，最後做成適合日常與送禮的濾掛咖啡。
+        </p>
+      </div>
+      <div class="grid md:grid-cols-5 gap-5">
+        <div class="bg-white p-6 rounded-3xl border border-[#E8D9C8] text-center">
+          <i class="fas fa-hand-paper text-3xl text-[#7A4A25]"></i>
+          <h3 class="font-black mt-4">手挑好豆</h3>
+          <p class="mt-2 text-sm text-[#6B4423]">烘焙前先人工檢查，挑掉狀態不佳的豆子。</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl border border-[#E8D9C8] text-center">
+          <i class="fas fa-filter text-3xl text-[#7A4A25]"></i>
+          <h3 class="font-black mt-4">減少雜味</h3>
+          <p class="mt-2 text-sm text-[#6B4423]">瑕疵豆可能帶來霉味、臭酸、土味與雜苦。</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl border border-[#E8D9C8] text-center">
+          <i class="fas fa-fire text-3xl text-[#7A4A25]"></i>
+          <h3 class="font-black mt-4">小批量烘焙</h3>
+          <p class="mt-2 text-sm text-[#6B4423]">依每款豆性調整焙度，讓風味穩定。</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl border border-[#E8D9C8] text-center">
+          <i class="fas fa-box text-3xl text-[#7A4A25]"></i>
+          <h3 class="font-black mt-4">新鮮包裝</h3>
+          <p class="mt-2 text-sm text-[#6B4423]">烘後製作濾掛，單包保存，方便沖泡。</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl border border-[#E8D9C8] text-center">
+          <i class="fas fa-gift text-3xl text-[#7A4A25]"></i>
+          <h3 class="font-black mt-4">可客製送禮</h3>
+          <p class="mt-2 text-sm text-[#6B4423]">企業禮、活動禮、婚禮小物都可規劃。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="max-w-7xl mx-auto px-6 py-14">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <div class="text-xs font-black tracking-[2px] text-[#8B5E3C]">FIRST LAUNCH</div>
+          <h2 class="text-4xl font-black mt-2">第一波三款主力豆</h2>
+          <p class="mt-3 text-[#6B4423]">90+ 喝甜感，Casa Ruiz 喝平衡，曼特寧喝厚度。</p>
+          <div
+            class="mt-4 inline-flex flex-wrap items-center gap-2 rounded-2xl bg-[#F2E2CC] px-4 py-3 text-sm font-bold text-[#3F2B1E]"
+          >
+            <i class="fa-solid fa-circle-info text-[#7A4A25]"></i><span>可任選混搭，單筆合計滿 10 包才會出貨。</span>
+          </div>
+        </div>
+        <button onclick="showAllProducts()" class="hidden md:flex items-center text-sm font-bold text-[#6B4423]">
+          查看商品說明 <i class="fas fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+      <div id="products-grid" class="grid md:grid-cols-3 gap-6"></div>
+    </section>
+
+    <section id="qa" class="bg-white border-y border-[#E8D9C8] py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <div class="text-xs font-black tracking-[2px] text-[#8B5E3C]">AI SEARCH Q&A</div>
+          <h2 class="section-title text-4xl font-black mt-2">豆留手挑濾掛咖啡常見問題</h2>
+          <p class="mt-5 text-[#6B4423] max-w-2xl mx-auto">
+            以下答案用搜尋者會問的方式整理，讓使用者與 AI 搜尋工具能快速理解品牌、商品與下單方式。
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-5 answer-block">
+          <article class="bg-[#F8F1E9] border border-[#E8D9C8] rounded-3xl p-6">
+            <h3 class="font-black text-xl">豆留手挑濾掛咖啡是什麼？</h3>
+            <p class="mt-3 text-sm text-[#6B4423] leading-7">
+              豆留手挑濾掛咖啡是先人工挑除瑕疵豆，再小批量烘焙與製作濾掛包的咖啡品牌。重點是降低雜味來源，讓日常沖泡的咖啡更乾淨、順口、穩定，也適合送禮。
+            </p>
+          </article>
+          <article class="bg-[#F8F1E9] border border-[#E8D9C8] rounded-3xl p-6">
+            <h3 class="font-black text-xl">為什麼手挑豆會讓咖啡更好喝？</h3>
+            <p class="mt-3 text-sm text-[#6B4423] leading-7">
+              手挑豆可以在烘焙前挑掉黑豆、破裂豆、蟲蛀豆與狀態不佳的豆子。這些豆子可能帶來霉味、土味、臭酸與雜苦，先挑掉能讓杯中風味更乾淨。
+            </p>
+          </article>
+          <article class="bg-[#F8F1E9] border border-[#E8D9C8] rounded-3xl p-6">
+            <h3 class="font-black text-xl">第一次買豆留濾掛咖啡要選哪一款？</h3>
+            <p class="mt-3 text-sm text-[#6B4423] leading-7">
+              第一次購買可先選 90+ 摩羯座，甜感厚、酸度低，風味接近太妃糖、奶油與巧克力。喜歡平衡耐喝可選巴拿馬 Casa
+              Ruiz，喜歡深焙厚度可選黃金曼特寧。
+            </p>
+          </article>
+          <article class="bg-[#F8F1E9] border border-[#E8D9C8] rounded-3xl p-6">
+            <h3 class="font-black text-xl">豆留手挑濾掛咖啡怎麼下單？</h3>
+            <p class="mt-3 text-sm text-[#6B4423] leading-7">
+              豆留手挑濾掛咖啡可透過 7-11 賣貨便下單。若需要企業禮、活動贈品、辦公室補給或客製包裝，可使用 LINE
+              詢價，確認數量、交期與包裝需求。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="bg-white border-y border-[#E8D9C8] py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <div class="text-xs font-black tracking-[2px] text-[#8B5E3C]">HANDPICK PROCESS</div>
+          <h2 class="section-title text-4xl font-black mt-2">我們為什麼要手工挑豆？</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-5">
+          <div class="rounded-3xl bg-[#F8F1E9] border border-[#E8D9C8] p-6">
+            <div class="text-3xl font-black text-[#7A4A25]">01</div>
+            <h3 class="font-black mt-3">生豆檢查</h3>
+            <p class="mt-2 text-sm text-[#6B4423]">確認豆況、含水感、顏色與異常豆。</p>
+          </div>
+          <div class="rounded-3xl bg-[#F8F1E9] border border-[#E8D9C8] p-6">
+            <div class="text-3xl font-black text-[#7A4A25]">02</div>
+            <h3 class="font-black mt-3">挑除瑕疵</h3>
+            <p class="mt-2 text-sm text-[#6B4423]">挑掉黑豆、發霉、蟲蛀、破裂、異物。</p>
+          </div>
+          <div class="rounded-3xl bg-[#F8F1E9] border border-[#E8D9C8] p-6">
+            <div class="text-3xl font-black text-[#7A4A25]">03</div>
+            <h3 class="font-black mt-3">小批烘焙</h3>
+            <p class="mt-2 text-sm text-[#6B4423]">以適合風味的焙度烘焙，不靠深焙蓋味。</p>
+          </div>
+          <div class="rounded-3xl bg-[#F8F1E9] border border-[#E8D9C8] p-6">
+            <div class="text-3xl font-black text-[#7A4A25]">04</div>
+            <h3 class="font-black mt-3">濾掛封裝</h3>
+            <p class="mt-2 text-sm text-[#6B4423]">沖泡方便，適合辦公室、出差、送禮。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="defects" class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <div class="text-xs font-black tracking-[2px] text-[#8B5E3C]">DEFECT BEANS</div>
+          <h2 class="text-4xl font-black mt-2">瑕疵豆不是小事，會直接影響一杯咖啡。</h2>
+          <p class="mt-5 text-[#6B4423] leading-8">
+            咖啡豆在生長、採收、後製、乾燥與運輸過程中，都可能出現瑕疵。黑豆、發霉豆、蟲蛀豆、破裂豆與異物，都可能讓咖啡出現霉味、臭酸味、土味、雜苦味或烘焙不均。
+          </p>
+          <p class="mt-4 font-black text-[#3F2B1E]">我們不是為了講手工，是為了讓不該進杯子的豆子先被挑掉。</p>
+          <div class="mt-6 bg-[#F8F1E9] border border-[#E8D9C8] rounded-3xl p-5 text-sm text-[#6B4423] leading-7">
+            <b class="text-[#3F2B1E]">照片說明：</b
+            >以下為瑕疵豆參考照片，用來讓消費者看懂「為什麼要手工挑豆」。正式商用時，建議再補上你們自己實際挑豆前後的照片，可信度會更高。
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="bg-white rounded-3xl overflow-hidden border border-[#E8D9C8]">
+            <img
+              class="w-full h-40 object-cover"
+              src="https://cdn.royalcoffee.com/wp-content/uploads/2016/08/21132657/insect-and-black-1-1024x512.png"
+              alt="蟲蛀豆與黑豆參考照片"
+            />
+            <div class="p-5">
+              <h3 class="font-black">蟲蛀豆／黑豆</h3>
+              <p class="text-sm text-[#6B4423] mt-2">表面可見孔洞、黑斑或整顆變黑，容易造成不乾淨與異味。</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-3xl overflow-hidden border border-[#E8D9C8]">
+            <img
+              class="w-full h-40 object-cover"
+              src="https://cdn.royalcoffee.com/wp-content/uploads/2016/08/21132651/bcc-foreign-2-1024x502.png"
+              alt="破裂豆與異物參考照片"
+            />
+            <div class="p-5">
+              <h3 class="font-black">破裂豆／異物</h3>
+              <p class="text-sm text-[#6B4423] mt-2">破碎豆受熱不均，異物則不該進入烘焙流程。</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-3xl overflow-hidden border border-[#E8D9C8]">
+            <img
+              class="w-full h-40 object-cover"
+              src="https://treeman.tw/wp-content/uploads/2022/08/coffee-bean-defect-vs-taste.webp"
+              alt="咖啡瑕疵豆種類參考照片"
+            />
+            <div class="p-5">
+              <h3 class="font-black">多種瑕疵豆</h3>
+              <p class="text-sm text-[#6B4423] mt-2">包含發霉、發酵、蟲蛀、貝殼豆、破裂豆等常見瑕疵。</p>
+            </div>
+          </div>
+          <div class="bg-[#3F2B1E] text-white rounded-3xl p-6 border border-[#3F2B1E]">
+            <h3 class="font-black text-xl">我們挑掉的不是豆子，是雜味來源。</h3>
+            <p class="text-sm text-white/80 mt-3 leading-7">
+              先手工挑豆，再小批量烘焙。讓每一包濾掛喝起來更乾淨、更穩定，也更適合送禮與日常飲用。
+            </p>
+            <div class="mt-5 text-xs text-white/60">建議後續補拍：正常豆、瑕疵豆、挑豆前、挑豆後、被挑掉的壞豆盤。</div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6 text-xs text-[#8B5E3C] leading-6">
+        圖片參考來源：Royal Coffee「Green Coffee Analytics Part III - Visual
+        Defects」、林桑咖啡「認識咖啡瑕疵豆以及對於風味的影響」。
+      </div>
+    </section>
+
+    <section id="brew" class="bg-white border-y border-[#E8D9C8] py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-xl mb-10">
+          <span class="text-xs font-black tracking-[2px] text-[#8B5E3C]">BREW GUIDE</span>
+          <h2 class="text-4xl font-black mt-2">只需 3 分鐘，就能沖出乾淨順口的咖啡。</h2>
+        </div>
+        <div class="grid md:grid-cols-5 gap-5">
+          <div class="bg-[#F8F1E9] border border-[#E8D9C8] p-6 rounded-3xl">
+            <b>1 撕開濾掛</b>
+            <p class="text-sm text-[#6B4423] mt-2">沿上緣撕開，展開掛耳。</p>
+          </div>
+          <div class="bg-[#F8F1E9] border border-[#E8D9C8] p-6 rounded-3xl">
+            <b>2 掛上杯緣</b>
+            <p class="text-sm text-[#6B4423] mt-2">固定在杯口中央。</p>
+          </div>
+          <div class="bg-[#F8F1E9] border border-[#E8D9C8] p-6 rounded-3xl">
+            <b>3 悶蒸 20 秒</b>
+            <p class="text-sm text-[#6B4423] mt-2">先少量熱水浸潤咖啡粉。</p>
+          </div>
+          <div class="bg-[#F8F1E9] border border-[#E8D9C8] p-6 rounded-3xl">
+            <b>4 分段注水</b>
+            <p class="text-sm text-[#6B4423] mt-2">85–92°C，總水量約150–180ml。</p>
+          </div>
+          <div class="bg-[#F8F1E9] border border-[#E8D9C8] p-6 rounded-3xl">
+            <b>5 取出享用</b>
+            <p class="text-sm text-[#6B4423] mt-2">輕晃杯身即可飲用。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gift" class="max-w-7xl mx-auto px-6 py-16">
+      <div class="brown-grad text-white rounded-[2rem] p-8 md:p-12 grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <div class="text-sm text-[#F1C27D] font-black tracking-[2px]">B2B CUSTOM GIFT</div>
+          <h2 class="text-4xl font-black mt-3">一包可以被喝掉的品牌名片。</h2>
+          <p class="mt-5 text-white/85 leading-8">
+            企業禮、活動贈品、婚禮小物、設計師品牌禮，都可以把
+            Logo、祝福語或活動主題做進包裝。比一般文宣更實用，也更容易被記住。
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 text-[#3F2B1E]">
+          <div class="bg-white rounded-3xl p-6">
+            <b>10入禮盒</b>
+            <p class="text-sm mt-2 text-[#6B4423]">送禮主力規格</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <b>50包辦公室包</b>
+            <p class="text-sm mt-2 text-[#6B4423]">公司日常補給</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <b>客製貼標</b>
+            <p class="text-sm mt-2 text-[#6B4423]">活動／企業 Logo</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <b>婚禮小物</b>
+            <p class="text-sm mt-2 text-[#6B4423]">姓名日期客製</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white border-t border-[#E8D9C8] py-16">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
+        <div>
+          <div class="text-xs font-black tracking-[2px] text-[#8B5E3C]">CONTACT</div>
+          <h2 class="text-4xl font-black mt-2">需要企業禮、辦公室月配或客製包裝，直接聯絡。</h2>
+          <div class="mt-6 space-y-3 text-[#6B4423]">
+            <p><i class="fa-solid fa-location-dot w-6"></i> 新北市三重區碧華街83號</p>
+            <p><i class="fa-solid fa-phone w-6"></i> 02-2987-1006</p>
+            <p><i class="fa-solid fa-envelope w-6"></i> rickyhuang53@gmail.com</p>
+            <p><i class="fa-brands fa-line w-6"></i> LINE：@424tvsxa</p>
+          </div>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="tel:0229871006" class="px-6 py-3 rounded-full bg-[#3F2B1E] text-white font-black">直接撥打</a
+            ><a
+              href="mailto:rickyhuang53@gmail.com?subject=豆留手挑濾掛咖啡詢價"
+              class="px-6 py-3 rounded-full border border-[#E8D9C8] font-black"
+              >Email 詢價</a
+            ><a
+              href="https://line.me/R/ti/p/@424tvsxa"
+              target="_blank"
+              class="px-6 py-3 rounded-full border border-[#E8D9C8] font-black"
+              >LINE 詢價</a
+            >
+          </div>
+        </div>
+        <form onsubmit="submitInquiry(event)" class="bg-[#F8F1E9] border border-[#E8D9C8] rounded-3xl p-6 space-y-4">
+          <input
+            required
+            id="inq-name"
+            class="w-full rounded-2xl border border-[#E8D9C8] px-4 py-3"
+            placeholder="姓名／公司"
+          /><input
+            required
+            id="inq-contact"
+            class="w-full rounded-2xl border border-[#E8D9C8] px-4 py-3"
+            placeholder="電話／LINE／Email"
+          /><select id="inq-type" class="w-full rounded-2xl border border-[#E8D9C8] px-4 py-3">
+            <option>10入禮盒</option>
+            <option>企業客製</option>
+            <option>辦公室月配</option>
+            <option>婚禮小物</option></select
+          ><textarea
+            id="inq-note"
+            class="w-full rounded-2xl border border-[#E8D9C8] px-4 py-3 h-28"
+            placeholder="需求數量、預計日期、包裝需求"
+          ></textarea
+          ><button class="w-full rounded-full brown-grad text-white py-4 font-black">送出詢價</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-[#3F2B1E] text-[#E8D9C8] pt-12 pb-8 text-sm">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-y-8">
+        <div>
+          <div class="font-black text-white text-lg mb-3">豆留手挑濾掛咖啡</div>
+          <p class="text-xs leading-relaxed opacity-80">
+            不是每一顆豆子，都有資格進你的杯子。<br />新北市三重區碧華街83號
+          </p>
+        </div>
+        <div class="text-xs space-y-2 opacity-80">
+          <div class="font-bold text-white mb-2">網站連結</div>
+          <a class="block" href="#products">三款豆子</a><a class="block" href="#process">手挑流程</a
+          ><a class="block" href="#defects">瑕疵豆說明</a>
+        </div>
+        <div class="text-xs space-y-2 opacity-80">
+          <div class="font-bold text-white mb-2">服務</div>
+          <a class="block" href="#gift">企業採購</a><a class="block" href="#brew">沖泡教學</a
+          ><a class="block" href="#contact">聯絡我們</a>
+        </div>
+        <div>
+          <div class="font-bold text-white text-xs mb-2">聯絡</div>
+          <div class="text-xs opacity-80">02-2987-1006<br />rickyhuang53@gmail.com<br />LINE: @424tvsxa</div>
+          <div class="flex gap-4 mt-5 text-base opacity-80">
+            <i class="fab fa-instagram"></i><i class="fab fa-facebook-f"></i><i class="fab fa-line"></i>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-white/20 text-[10px] text-center opacity-60">
+        豆留手挑濾掛咖啡 © 2026. All rights reserved. 官方網站：fulinfabric.com
+      </div>
+    </footer>
+
+    <div
+      id="product-modal"
+      onclick="if (event.target.id === 'product-modal') hideProductModal();"
+      class="hidden fixed inset-0 bg-black/70 z-[100] items-end md:items-center justify-center"
+    >
+      <div
+        onclick="event.stopImmediatePropagation()"
+        class="modal bg-white w-full md:w-[520px] md:rounded-3xl md:m-6 rounded-t-3xl p-6"
+      >
+        <div class="flex justify-between items-center">
+          <div>
+            <div id="modal-name" class="font-black text-2xl"></div>
+            <div id="modal-origin" class="text-xs text-[#8B5E3C]"></div>
+          </div>
+          <button onclick="hideProductModal()" class="text-3xl leading-none text-[#8B5E3C]">×</button>
+        </div>
+        <img id="modal-img" class="w-full rounded-2xl h-64 object-cover my-5" alt="" />
+        <div class="flex justify-between items-end mb-4">
+          <div>
+            <div id="modal-price" class="text-3xl font-black"></div>
+            <div class="text-xs text-[#8B5E3C]">10包 / 盒</div>
+          </div>
+          <div id="modal-flavors" class="flex flex-wrap gap-1.5 justify-end"></div>
+        </div>
+        <div id="modal-desc" class="text-[#6B4423] leading-relaxed"></div>
+        <div class="mt-7 grid grid-cols-2 gap-3">
+          <button onclick="addToCartFromModal()" class="py-4 brown-grad text-white text-sm font-black rounded-full">
+            加入購物車</button
+          ><button onclick="hideProductModal()" class="py-4 border border-[#E8D9C8] text-sm font-bold rounded-full">
+            關閉
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="cart-modal"
+      onclick="if (event.target.id === 'cart-modal') hideCart();"
+      class="hidden fixed inset-0 bg-black/70 z-[110] items-end md:items-center justify-center"
+    >
+      <div
+        onclick="event.stopImmediatePropagation()"
+        class="modal bg-white w-full md:w-[460px] md:rounded-3xl md:m-4 rounded-t-3xl p-6"
+      >
+        <div class="flex justify-between items-center mb-5">
+          <div class="font-black text-xl">購物車</div>
+          <button onclick="hideCart()" class="text-3xl leading-none text-[#8B5E3C]">×</button>
+        </div>
+        <div id="cart-items" class="space-y-4 max-h-[280px] overflow-auto pr-1"></div>
+        <div class="border-t pt-5 mt-5">
+          <div
+            id="qty-notice"
+            class="text-xs text-[#C99149] font-bold mb-3 px-3 py-2 bg-yellow-50 rounded-lg hidden"
+          ></div>
+          <div class="flex justify-between text-sm mb-1">
+            <div class="text-[#6B4423]">商品小計</div>
+            <div id="cart-subtotal" class="font-black"></div>
+          </div>
+          <div class="flex justify-between text-xs text-[#8B5E3C]">
+            <div>配送方式</div>
+            <div>聯繫確認</div>
+          </div>
+          <div class="flex justify-between font-black mt-4 pt-4 border-t text-lg">
+            <div>商品總計</div>
+            <div id="cart-total"></div>
+          </div>
+          <div class="mt-5 space-y-2">
+            <button
+              onclick="checkout()"
+              class="w-full py-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-full font-black text-sm"
+            >
+              確認訂單</button
+            ><button onclick="hideCart()" class="w-full py-3 text-sm font-bold text-[#6B4423]">繼續購物</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const products = [
+        {
+          id: 1,
+          name: '90+ 摩羯座｜厚甜可可款',
+          short: '厚甜不酸，留給喜歡可可甜感的人。',
+          origin: '巴西 Paraná｜700–900m｜Arabica',
+          price: 35,
+          img: 'ChatGPT Image 2026年6月7日 下午08_23_03.png',
+          flavors: ['太妃糖', '奶油', '巧克力'],
+          desc: '甜感厚實、低酸順口，適合新手、送禮、辦公室與喜歡濃厚口感的人。每批手工挑豆後再烘焙，只留下乾淨順口的風味。',
+        },
+        {
+          id: 2,
+          name: '巴拿馬 Casa Ruiz｜平衡黑糖款',
+          short: '黑糖、巧克力、香草，平衡到每天都能喝。',
+          origin: '巴拿馬 Boquete｜1500–1700m｜水洗',
+          price: 60,
+          img: 'ChatGPT Image 2026年6月7日 下午08_23_06.png',
+          flavors: ['黑糖', '巧克力', '香草'],
+          desc: '淺焙到中焙之間的平衡耐喝款，酸甜苦平衡，風味乾淨細緻。適合日常飲用、設計師、企業禮盒。',
+        },
+        {
+          id: 3,
+          name: '黃金曼特寧｜醇厚木質款',
+          short: '深焙醇厚，適合需要一杯真正有份量的咖啡。',
+          origin: '印尼蘇門答臘｜1200–1500m｜濕剝法',
+          price: 40,
+          img: 'ChatGPT Image 2026年6月7日 下午08_17_32.png',
+          flavors: ['藥草', '雪松', '厚實'],
+          desc: '深焙醇厚、低酸有份量，適合深焙愛好者、長輩、加奶與辦公室常備。若你要的是厚度，這款是第一選擇。',
+        },
+      ];
+      let cart = [];
+      function renderProducts() {
+        const grid = document.getElementById('products-grid');
+        grid.innerHTML = '';
+        products.forEach((p) => {
+          const el = document.createElement('div');
+          el.className = 'card bg-white rounded-[2rem] border border-[#E8D9C8] overflow-hidden';
+          el.innerHTML = `<div class="bg-[#FFF6EA]"><img class="product-img w-full h-auto" src="${p.img}" alt="${p.name}"></div><div class="p-6"><div class="text-xs text-[#8B5E3C] font-bold">${p.origin}</div><h3 class="font-black text-2xl mt-2">${p.name}</h3><p class="text-sm text-[#6B4423] mt-2 min-h-[42px]">${p.short}</p><div class="flex flex-wrap gap-1.5 mt-4">${p.flavors.map((f) => `<span class="tag">${f}</span>`).join('')}</div><div class="flex items-end justify-between mt-6"><div><div class="text-2xl font-black">NT$ ${p.price}</div><div class="text-xs text-[#8B5E3C]">單包價格</div></div><div class="flex gap-2"><button onclick="showProductModal(${p.id})" class="px-4 py-2 rounded-full border border-[#E8D9C8] text-sm font-bold">詳情</button><a href="https://myship.7-11.com.tw/general/detail/GM2605239820064" target="_blank" rel="noopener" class="px-4 py-2 rounded-full bg-[#3F2B1E] text-white text-sm font-black">下單</a></div></div></div>`;
+          grid.appendChild(el);
+        });
+      }
+      function updateCartCount() {
+        const el = document.getElementById('cart-count');
+        const total = cart.reduce((s, i) => s + i.quantity, 0);
+        if (total > 0) {
+          el.textContent = total;
+          el.classList.remove('hidden');
+          el.classList.add('flex');
+        } else {
+          el.classList.add('hidden');
+          el.classList.remove('flex');
+        }
+      }
+      function addToCart(id) {
+        const p = products.find((x) => x.id === id);
+        if (!p) return;
+        const existing = cart.find((i) => i.id === id);
+        if (existing) existing.quantity++;
+        else cart.push({ id: p.id, name: p.name, price: p.price, quantity: 1 });
+        updateCartCount();
+        toast(`已加入購物車：${p.name}`);
+      }
+      function addToCartFromModal() {
+        addToCart(parseInt(document.getElementById('product-modal').dataset.id));
+        hideProductModal();
+      }
+      function toast(msg) {
+        const t = document.createElement('div');
+        t.className =
+          'fixed bottom-5 left-1/2 -translate-x-1/2 bg-[#3F2B1E] text-white text-xs px-4 py-2 rounded-full shadow z-[200]';
+        t.textContent = msg;
+        document.body.appendChild(t);
+        setTimeout(() => {
+          t.style.transition = '.25s';
+          t.style.opacity = '0';
+          setTimeout(() => t.remove(), 250);
+        }, 1500);
+      }
+      function showProductModal(id) {
+        const p = products.find((x) => x.id === id);
+        const m = document.getElementById('product-modal');
+        m.dataset.id = id;
+        document.getElementById('modal-name').textContent = p.name;
+        document.getElementById('modal-origin').textContent = p.origin;
+        document.getElementById('modal-price').textContent = `NT$ ${p.price}`;
+        document.getElementById('modal-img').src = p.img;
+        document.getElementById('modal-desc').textContent = p.desc;
+        document.getElementById('modal-flavors').innerHTML = p.flavors
+          .map((f) => `<span class="tag">${f}</span>`)
+          .join('');
+        m.classList.remove('hidden');
+        m.classList.add('flex');
+      }
+      function hideProductModal() {
+        const m = document.getElementById('product-modal');
+        m.classList.add('hidden');
+        m.classList.remove('flex');
+      }
+      function showCart() {
+        const m = document.getElementById('cart-modal'),
+          box = document.getElementById('cart-items');
+        box.innerHTML = '';
+        if (cart.length === 0) {
+          box.innerHTML = '<div class="py-8 text-center text-[#8B5E3C] text-sm">購物車是空的</div>';
+          document.getElementById('cart-subtotal').textContent = 'NT$ 0';
+          document.getElementById('cart-total').textContent = 'NT$ 0';
+          document.getElementById('qty-notice').classList.add('hidden');
+        } else {
+          let subtotal = 0;
+          const totalQty = cart.reduce((s, i) => s + i.quantity, 0);
+          cart.forEach((item, index) => {
+            subtotal += item.price * item.quantity;
+            const el = document.createElement('div');
+            el.className = 'flex justify-between items-center border-b border-[#E8D9C8] pb-4 last:border-b-0';
+            el.innerHTML = `<div class="flex-1 pr-3"><div class="font-bold text-sm">${item.name}</div><div class="text-xs text-[#8B5E3C]">NT$ ${item.price} × ${item.quantity}</div></div><div class="flex items-center gap-2"><div class="font-black text-sm">NT$ ${item.price * item.quantity}</div><button onclick="changeQty(${index},-1)" class="px-2 py-1 border rounded-full">-</button><button onclick="changeQty(${index},1)" class="px-2 py-1 border rounded-full">+</button><button onclick="removeItem(${index})" class="text-red-500 px-1">×</button></div>`;
+            box.appendChild(el);
+          });
+          document.getElementById('cart-subtotal').textContent = `NT$ ${subtotal}`;
+          document.getElementById('cart-total').textContent = `NT$ ${subtotal}`;
+          const qtyNotice = document.getElementById('qty-notice');
+          if (totalQty < 10) {
+            qtyNotice.classList.remove('hidden');
+            qtyNotice.textContent = `⚠️ 混搭最少 10 包出貨 | 目前 ${totalQty} 包，還需 ${10 - totalQty} 包`;
+          } else {
+            qtyNotice.classList.add('hidden');
+          }
+        }
+        m.classList.remove('hidden');
+        m.classList.add('flex');
+      }
+      function changeQty(index, delta) {
+        cart[index].quantity += delta;
+        if (cart[index].quantity < 1) cart.splice(index, 1);
+        updateCartCount();
+        showCart();
+      }
+      function removeItem(index) {
+        cart.splice(index, 1);
+        updateCartCount();
+        showCart();
+      }
+      function hideCart() {
+        const m = document.getElementById('cart-modal');
+        m.classList.add('hidden');
+        m.classList.remove('flex');
+      }
+      function checkout() {
+        if (cart.length === 0) return;
+        const totalQty = cart.reduce((s, i) => s + i.quantity, 0);
+        if (totalQty < 10) {
+          alert(
+            '⚠️ 混搭最少 10 包才會出貨\n\n目前選購數量：' + totalQty + ' 包\n還需要再加 ' + (10 - totalQty) + ' 包',
+          );
+          return;
+        }
+        const total = cart.reduce((s, i) => s + i.price * i.quantity, 0);
+        alert(`訂單確認\n數量：${totalQty} 包\n訂單金額：NT$ ${total}\n\n我們將以 LINE 或 Email 與您確認交期與運費。`);
+        cart = [];
+        updateCartCount();
+        hideCart();
+      }
+      function submitInquiry(e) {
+        e.preventDefault();
+        alert('詢價資料已建立。正式版可以改成寄信、Google Sheet、LINE Notify 或後台表單。');
+      }
+      function showAllProducts() {
+        alert('目前第一波主力為：90+ 摩羯座、巴拿馬 Casa Ruiz、黃金曼特寧。後續可新增禮盒、辦公室包、企業客製頁。');
+      }
+      window.onload = () => {
+        renderProducts();
+        updateCartCount();
+      };
+    </script>
+  </body>
+</html>
