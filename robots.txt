@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: Google-Extended
 Allow: /
+
+Sitemap: https://rickyhuang4567-max.github.io/douliu-coffee/sitemap.xml
