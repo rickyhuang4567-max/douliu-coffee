@@ -280,7 +280,7 @@
         </div>
         <div class="flex items-center gap-3">
           <button
-            onclick="showCart()"
+            onclick="window.location.href='https://myship.7-11.com.tw/general/detail/GM2605239820064'"
             class="relative flex items-center gap-2 px-4 py-2.5 rounded-full border border-[#E8D9C8] hover:bg-[#F8F1E9] text-sm font-bold"
           >
             <i class="fas fa-shopping-bag"></i><span class="hidden sm:inline">購物車</span
@@ -927,7 +927,6 @@
         m.classList.remove('flex');
       }
       function checkout() {
-        if (cart.length === 0) return;
         window.location.href = 'https://myship.7-11.com.tw/general/detail/GM2605239820064';
       }
       function submitInquiry(e) {
