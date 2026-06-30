@@ -775,7 +775,7 @@
               onclick="checkout()"
               class="w-full py-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-full font-black text-sm"
             >
-              確認訂單</button
+              前往賣貨便下單</button
             ><button onclick="hideCart()" class="w-full py-3 text-sm font-bold text-[#6B4423]">繼續購物</button>
           </div>
         </div>
@@ -894,7 +894,6 @@
           document.getElementById('qty-notice').classList.add('hidden');
         } else {
           let subtotal = 0;
-          const totalQty = cart.reduce((s, i) => s + i.quantity, 0);
           cart.forEach((item, index) => {
             subtotal += item.price * item.quantity;
             const el = document.createElement('div');
@@ -905,12 +904,8 @@
           document.getElementById('cart-subtotal').textContent = `NT$ ${subtotal}`;
           document.getElementById('cart-total').textContent = `NT$ ${subtotal}`;
           const qtyNotice = document.getElementById('qty-notice');
-          if (totalQty < 10) {
-            qtyNotice.classList.remove('hidden');
-            qtyNotice.textContent = `⚠️ 混搭最少 10 包出貨 | 目前 ${totalQty} 包，還需 ${10 - totalQty} 包`;
-          } else {
-            qtyNotice.classList.add('hidden');
-          }
+          qtyNotice.classList.remove('hidden');
+          qtyNotice.textContent = '將前往 7-11 賣貨便，請在賣貨便頁面選擇品項與數量。';
         }
         m.classList.remove('hidden');
         m.classList.add('flex');
@@ -933,18 +928,7 @@
       }
       function checkout() {
         if (cart.length === 0) return;
-        const totalQty = cart.reduce((s, i) => s + i.quantity, 0);
-        if (totalQty < 10) {
-          alert(
-            '⚠️ 混搭最少 10 包才會出貨\n\n目前選購數量：' + totalQty + ' 包\n還需要再加 ' + (10 - totalQty) + ' 包',
-          );
-          return;
-        }
-        const total = cart.reduce((s, i) => s + i.price * i.quantity, 0);
-        alert(`訂單確認\n數量：${totalQty} 包\n訂單金額：NT$ ${total}\n\n我們將以 LINE 或 Email 與您確認交期與運費。`);
-        cart = [];
-        updateCartCount();
-        hideCart();
+        window.location.href = 'https://myship.7-11.com.tw/general/detail/GM2605239820064';
       }
       function submitInquiry(e) {
         e.preventDefault();
