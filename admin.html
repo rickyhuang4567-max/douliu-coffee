@@ -6,9 +6,28 @@
     <title>後台總覽｜福麟商行 Fulin</title>
     <meta name="description" content="福麟商行網站後台總覽，快速查看瀏覽統計、熱門頁面與近期訪客狀況。" />
     <meta name="robots" content="noindex, nofollow" />
+    <script>
+      if (sessionStorage.getItem('fulin-admin-auth') === 'ok') {
+        document.documentElement.classList.add('admin-unlocked');
+      }
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="admin-page">
+    <section class="admin-gate" aria-labelledby="admin-gate-title">
+      <div class="admin-gate-card">
+        <p class="eyebrow">ADMIN ACCESS</p>
+        <h1 id="admin-gate-title">請輸入後台密碼</h1>
+        <p>輸入正確密碼後，後台總覽才會顯示。</p>
+        <form class="admin-gate-form" id="admin-gate-form">
+          <label for="admin-password">後台密碼</label>
+          <input id="admin-password" name="password" type="password" placeholder="輸入密碼" autocomplete="current-password" required />
+          <button type="submit">解鎖後台</button>
+        </form>
+        <p class="admin-gate-error" id="admin-gate-error" hidden>密碼錯誤，請再試一次。</p>
+      </div>
+    </section>
+
     <nav class="admin-nav">
       <div class="container admin-nav-inner">
         <a class="admin-brand" href="index.html">
@@ -78,5 +97,39 @@
         </div>
       </section>
     </main>
+    <script>
+      (function () {
+        const password = 'Fulin2026!';
+        const storageKey = 'fulin-admin-auth';
+        const form = document.getElementById('admin-gate-form');
+        const input = document.getElementById('admin-password');
+        const error = document.getElementById('admin-gate-error');
+
+        function unlockAdmin() {
+          sessionStorage.setItem(storageKey, 'ok');
+          document.documentElement.classList.add('admin-unlocked');
+          error.hidden = true;
+          form.reset();
+        }
+
+        if (document.documentElement.classList.contains('admin-unlocked')) {
+          return;
+        }
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          if (input.value === password) {
+            unlockAdmin();
+            return;
+          }
+
+          error.hidden = false;
+          input.value = '';
+          input.focus();
+        });
+
+        input.focus();
+      })();
+    </script>
   </body>
 </html>

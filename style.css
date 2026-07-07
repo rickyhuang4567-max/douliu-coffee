@@ -126,6 +126,69 @@ img {
   background: radial-gradient(circle at 50% 0, #fff2c7 0, #f9e4ad 48%, #f4d993 100%);
   color: #1f160f;
 }
+html:not(.admin-unlocked) .admin-nav,
+html:not(.admin-unlocked) .admin-shell {
+  display: none;
+}
+html.admin-unlocked .admin-gate {
+  display: none;
+}
+.admin-gate {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+}
+.admin-gate-card {
+  width: min(520px, 100%);
+  background: rgba(255, 250, 242, 0.95);
+  border: 1px solid rgba(63, 43, 30, 0.1);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(111, 61, 13, 0.18);
+  padding: 32px;
+}
+.admin-gate-card h1 {
+  margin: 8px 0 12px;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.15;
+}
+.admin-gate-card p {
+  margin: 0;
+  color: #6d4e37;
+}
+.admin-gate-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+.admin-gate-form label {
+  font-weight: 800;
+  color: #4a2f1f;
+}
+.admin-gate-form input {
+  width: 100%;
+  min-height: 50px;
+  border: 1px solid rgba(63, 43, 30, 0.14);
+  border-radius: 14px;
+  padding: 0 16px;
+  font: inherit;
+  background: #fff;
+  color: #1f160f;
+}
+.admin-gate-form button {
+  min-height: 50px;
+  border: 0;
+  border-radius: 14px;
+  background: #6f3d0d;
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+}
+.admin-gate-error {
+  margin-top: 14px;
+  color: #8a1f11;
+  font-weight: 700;
+}
 .admin-nav {
   padding: 18px 0 0;
 }
