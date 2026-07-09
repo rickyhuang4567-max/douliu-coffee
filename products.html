@@ -88,6 +88,26 @@
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".answer-block"] }
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首頁",
+            "item": "https://coffee.fulinfabric.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "三款豆子",
+            "item": "https://coffee.fulinfabric.com/products.html"
+          }
+        ]
+      }
+    </script>
       <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMQPJY9Y5F"></script>
     <script>
@@ -119,7 +139,12 @@
       <div class="container">
         <p class="eyebrow">PRODUCTS</p>
         <h1>三款手挑濾掛咖啡</h1>
-        <p>依照風味、焙度與單價選豆，三款都可由 7-11 賣貨便下單。</p>
+        <nav class="breadcrumbs" aria-label="麵包屑">
+          <a href="index.html">首頁</a><span>／</span><span>三款豆子</span>
+        </nav>
+        <p>
+          依照風味、焙度與單價選豆，三款都可由 7-11 賣貨便下單。若你正在搜尋濾掛咖啡推薦、第一次買濾掛咖啡怎麼選，這一頁會先幫你把選豆邏輯說清楚。
+        </p>
       </div>
     </header>
     <section class="section">
@@ -257,6 +282,27 @@
             </table>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid2">
+        <article class="card">
+          <div class="card-body">
+            <h3>濾掛咖啡推薦給誰？</h3>
+            <p class="muted">
+              濾掛咖啡很適合想快速喝到咖啡的人，也適合辦公室、出差、送禮和第一次接觸手沖咖啡的人。這種形式省器具、好保存，也比較容易控制每一杯的風味穩定度。
+            </p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <h3>第一次買濾掛咖啡要先看什麼？</h3>
+            <p class="muted">
+              先看焙度、酸甜感和單包價格。喜歡厚甜可選 90+ 摩羯座，想要平衡耐喝可選巴拿馬 Casa Ruiz，喜歡深焙醇厚則選黃金曼特寧。
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 

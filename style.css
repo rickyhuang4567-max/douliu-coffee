@@ -530,6 +530,19 @@ h3 {
   background: linear-gradient(135deg, #fffaf2, #f3e2ca);
   border-bottom: 1px solid var(--line);
 }
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.breadcrumbs a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .page-title p {
   font-size: 18px;
   color: var(--muted);
